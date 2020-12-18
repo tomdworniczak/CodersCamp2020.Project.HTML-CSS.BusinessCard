@@ -1,0 +1,26 @@
+:root {
+    font-size: 16px; //default
+
+    @include media-mobile() {
+        font-size: 13px;
+    }
+    @include media-mobile-tablet() {
+        font-size: 14px;
+    }
+    @include media-tablet-desktop() {
+        font-size: 15px;
+    }
+}
+
+
+.page {
+    &__about-me,
+    &__skills,
+    &__projects,
+    &__contact {
+        @include padding(13.5vmin, 8vw);
+    }
+    &__footer {
+        border-top: 3px solid map-get($colors, 'yellow-accent');
+    }
+}
