@@ -1,0 +1,56 @@
+.contact {
+    min-height: 100vh;
+    background-color: map-get($colors, 'black-lighter');
+    text-align: center;
+    // Tablet
+    @include media-tablet-desktop() {
+        min-height: 100vmin;
+    }
+    //Mobile
+    @include media-mobile() {
+        min-height: auto;
+    }
+    //Between
+    @include media-mobile-tablet() {
+        min-height: auto;
+    }
+    &__button {
+        @extend .button;
+        @include bg-colr-blk('black-lighter');
+        margin-top: 60px;
+        &:hover {
+            @include font-clr-blk('black-lighter');
+        }
+    }
+}
+
+.input-container {
+    width: 80%;
+    text-align: left;
+    margin: 40px auto;
+    @include media-mobile() {
+
+    }
+    &--margin-btm {
+        margin-bottom: 0;
+    }
+}
+
+.form {
+    &__label {
+        display: block;
+        margin: 10px 0;
+    }
+    &__input {
+        width: 100%;
+        height: 50px;
+        background-color: map-get($colors, 'black-darker');
+        border: none;
+        padding-left: 20px;
+        &--large {
+            min-height: 160px;
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+    }
+}
